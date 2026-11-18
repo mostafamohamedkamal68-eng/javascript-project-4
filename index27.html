@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index 27.css">
+    <title>Air Conditioner Remote</title>
+</head>
+
+<body>
+    <div class="remote">
+        <div class="screen" aria-live="polite">
+            <div id="modeDisplay" class="mode">COOL ❄️</div>
+            <div id="temperature">24°C</div>
+            <div id="status">OFF</div>
+            <div id="timerDisplay">TIMER OFF</div>
+            <div id="featureDisplay" class="features">FAN AUTO · SWING OFF
+SLEEP OFF · TURBO OFF</div>
+        </div>
+
+        <div class="power-buttons">
+            <button type="button" id="onBtn" class="on" aria-label="Turn on">
+                ⏻
+                <span>ON</span>
+            </button>
+            <button type="button" id="offBtn" class="off" aria-label="Turn off">
+                ⏻
+                <span>OFF</span>
+            </button>
+        </div>
+
+        <div class="temperature-control">
+            <button type="button" id="increaseBtn" class="temp-btn" aria-label="Increase temperature">
+                ▲
+            </button>
+            <div class="temp-title">TEMP</div>
+            <button type="button" id="decreaseBtn" class="temp-btn" aria-label="Decrease temperature">
+                ▼
+            </button>
+        </div>
+
+        <div class="other-buttons">
+            <button type="button" id="fanBtn" aria-label="Cycle fan speed">
+                ❄️
+                <span>FAN</span>
+            </button>
+            <button type="button" id="modeBtn" aria-label="Change mode">
+                ☰
+                <span>MODE</span>
+            </button>
+            <button type="button" id="swingBtn" aria-label="Toggle swing" aria-pressed="false">
+                ↕
+                <span>SWING</span>
+            </button>
+            <button type="button" id="timerBtn" aria-label="Set timer">
+                ⏱
+                <span>TIMER</span>
+            </button>
+            <button type="button" id="sleepBtn" aria-label="Toggle sleep mode" aria-pressed="false">
+                🌙
+                <span>SLEEP</span>
+            </button>
+            <button type="button" id="turboBtn" aria-label="Toggle turbo mode" aria-pressed="false">
+                ≡
+                <span>TURBO</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="./script 27.js"></script>
+</body>
+
+</html>

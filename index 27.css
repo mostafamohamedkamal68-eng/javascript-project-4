@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #e9e5df;
+}
+
+.remote {
+    width: 350px;
+    padding: 25px;
+    background: #f8f6f2;
+    border-radius: 35px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.2),
+        inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.screen {
+    height: 190px;
+    padding: 15px 18px;
+    background: #c8cec5;
+    border: 8px solid #30332f;
+    border-radius: 20px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #252925;
+}
+
+.mode {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#temperature {
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+#status {
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#timerDisplay {
+    min-height: 14px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.features {
+    font-size: 10px;
+    line-height: 1.35;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.power-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.power-buttons button {
+    width: 100px;
+    height: 70px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    transition: 0.2s;
+}
+
+.power-buttons button span {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.on {
+    background: #67bd4d;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.off {
+    background: #ed5b4d;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.power-buttons button:hover {
+    transform: translateY(-3px);
+}
+
+.power-buttons button:active {
+    transform: scale(0.95);
+}
+
+.temperature-control {
+    width: 130px;
+    height: 210px;
+    margin: 25px auto;
+    border: 2px solid #ddd;
+    border-radius: 60px;
+    background: #fdfcf9;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.temp-btn {
+    width: 70px;
+    height: 60px;
+    border: none;
+    background: transparent;
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.temp-btn:first-child {
+    color: #e94b3c;
+}
+
+.temp-btn:last-child {
+    color: #2878b8;
+}
+
+.temp-btn:hover {
+    transform: scale(1.2);
+}
+
+.temp-btn:active {
+    transform: scale(0.9);
+}
+
+.temp-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.temp-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.other-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.other-buttons button {
+    height: 80px;
+    border: none;
+    border-radius: 20px;
+    background: #fdfcf9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    font-size: 25px;
+    color: #333;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.other-buttons button span {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.other-buttons button:hover {
+    transform: translateY(-3px);
+}
+
+.other-buttons button:active {
+    transform: scale(0.95);
+}
+
+.other-buttons button[aria-pressed="true"] {
+    background: #dcecff;
+    color: #1556a2;
+}
+
+button:focus-visible {
+    outline: 3px solid #2878b8;
+    outline-offset: 3px;
+}
+
+.remote.off-mode .screen {
+    opacity: 0.5;
+}
+
+.remote.off-mode .temperature-control {
+    opacity: 0.5;
+}
